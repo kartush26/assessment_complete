@@ -1,0 +1,10 @@
+<html>
+<body>
+  <center>
+    <p><%= flash[:notice]%></p>
+    <h2>Your Original Url is: <%= @original_url %></h2>
+
+    <h2>Your Shortener Url is: <%= link_to @short_url, shortened_urls_redirect_to_original_url_path(short_url: @short_url.gsub("http://localhost:3000/", ""))%> </h2>
+  </center>
+</body>
+</html>
